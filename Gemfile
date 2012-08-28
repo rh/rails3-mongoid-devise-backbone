@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'mongoid', '~> 3.0.0'
 
 group :assets do
   gem 'js-rails'

@@ -1,1 +1,41 @@
-<h1>Home</h1>
+<div class="container">
+  <div id="notesapp" class="row">
+    <div class="span5">
+      <form class="form-horizontal">
+        <legend>Add note</legend>
+        <div class="control-group">
+          <label class="control-label" for="title">Title</label>
+          <div class="controls">
+            <input id="title" type="text" placeholder="Title">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="body">Body</label>
+          <div class="controls">
+            <textarea id="body" placeholder="Body" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <button id="create" type="submit" class="btn">Add</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="span7">
+      <legend>Notes</legend>
+      <ul id="note-list"></ul>
+    </div>
+  </div>
+</div>
+
+<script id="note-template" type="text/template">
+  <div class="note">
+    <h3>{{title}}</h3>
+    <p>{{body}}</p>
+    <p>
+      <span class="date">{{date}}</span>
+      <a class="remove" href="#" title="Remove this note">remove</a>
+    </p>
+  </div>
+</script>

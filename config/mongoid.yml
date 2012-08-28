@@ -1,0 +1,32 @@
+production:
+  sessions:
+    default:
+      database: notes
+      hosts:
+        - localhost:27017
+      options:
+        safe: true
+        consistency: :strong
+  options:
+    allow_dynamic_fields: false
+    use_utc: true
+development:
+  sessions:
+    default:
+      database: notes_development
+      hosts:
+        - localhost:27017
+      options:
+        safe: true
+        consistency: :strong
+  options:
+    allow_dynamic_fields: false
+    use_utc: true
+test:
+  sessions:
+    default:
+      database: notes_test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong

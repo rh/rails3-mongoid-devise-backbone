@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+ul {
+  list-style: none;
+}
+div.note {
+  border-bottom: 1px solid #E5E5E5;
+}
+span.date {
+  font-size: smaller;
+  color: #777;
+  margin-right: 1em;
+}
