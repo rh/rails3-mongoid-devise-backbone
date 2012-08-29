@@ -43,7 +43,7 @@ var AppView = Backbone.View.extend({
     }});
 
     if (note) {
-      this.title.val('').focus();
+      this.title.val('');
       this.body.val('');
     }
   }
