@@ -1,7 +1,7 @@
 var NoteView = Backbone.View.extend({
   tagName: 'li',
 
-  template: Handlebars.compile($('#note-template').html()),
+  template: Template.compile('#note-template'),
 
   events: {
     'click .remove': 'remove'
