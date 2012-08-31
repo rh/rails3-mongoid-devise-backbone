@@ -16,13 +16,15 @@
 //= require underscore
 //= require backbone
 //= require handlebars
+//= require markdown.converter
+//= require markdown.sanitizer
 //= require twitter/bootstrap
 //= require ./common
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-//= require_tree .
+//= require ./bootstrap
 
 var Notes = new NoteCollection;
 var App = new AppView;

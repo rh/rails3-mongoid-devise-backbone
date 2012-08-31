@@ -32,7 +32,7 @@ var AppView = Backbone.View.extend({
     e.preventDefault();
 
     var title = this.title.val();
-    var body = this.body.val();
+    var body = Markdown.sanitize(this.body.val());
 
     var that = this;
 

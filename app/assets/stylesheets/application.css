@@ -12,7 +12,7 @@
  *= require_tree .
  */
 
-ul {
+ul#note-list {
   list-style: none;
 }
 div.note {
