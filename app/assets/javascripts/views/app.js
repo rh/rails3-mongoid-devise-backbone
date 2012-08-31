@@ -17,7 +17,7 @@ var AppView = Backbone.View.extend({
   },
 
   add: function(note) {
-    var date = moment(note.get('created_at')).format('DD-MM-YYYY HH:mm');
+    var date = Date.format(note.get('created_at'));
     var model = _.extend({}, note, {date: date});
     var view = new NoteView({model: model});
     this.$('#note-list').prepend(view.render().el);

@@ -9,7 +9,7 @@ var NoteView = Backbone.View.extend({
 
   render: function() {
     var body = Markdown.convert(this.model.get('body'));
-    var date = moment(this.model.get('created_at')).format('DD-MM-YYYY HH:mm');
+    var date = Date.format(this.model.get('created_at'));
     var context = _.extend({}, this.model.toJSON(), {body: body, date: date});
     var html = this.template(context);
     this.$el.html(html);

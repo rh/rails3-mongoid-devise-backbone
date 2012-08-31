@@ -1,3 +1,12 @@
+var Date = Date || {};
+
+Date.format = function(date) {
+  if (date) {
+    return moment(date).format('DD-MM-YYYY HH:mm');
+  }
+  return '';
+};
+
 var Template = Template || {};
 
 Template.compile = function(selector) {
