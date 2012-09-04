@@ -17,13 +17,11 @@
 //= require handlebars
 //= require markdown.converter
 //= require markdown.sanitizer
-//= require twitter/bootstrap
 //= require ./common
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-//= require ./bootstrap
 
 var app = new AppRouter();
 Backbone.history.start();
