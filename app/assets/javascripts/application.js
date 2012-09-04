@@ -11,7 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require moment
 //= require underscore
 //= require backbone
 //= require handlebars
