@@ -3,7 +3,9 @@ var Note = Backbone.Model.extend({
 
   defaults: function() {
     return {
-      created_at: new Date()
+      // Set the time for display purposes. The full
+      // date is set at the server.
+      created_at: (new Date()).toLocaleTimeString()
     }
   },
 

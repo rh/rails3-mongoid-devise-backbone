@@ -1,7 +1,8 @@
 var Date = Date || {};
 
 // Expects a string in the format '2012-09-04T21:10:14+02:00'
-// and returns a string in the format '04-09-2012 21:10'
+// and returns a string in the format '04-09-2012 21:10'.
+// If `date` is not in the expected format, `date` is returned unchanged.
 Date.format = function(date) {
   if (date) {
     var parts = date.split('T');
@@ -15,7 +16,7 @@ Date.format = function(date) {
     }
   }
 
-  return '';
+  return date;
 };
 
 var Template = Template || {};
