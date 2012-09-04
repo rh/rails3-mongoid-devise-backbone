@@ -27,6 +27,8 @@ var CreateNoteView = Backbone.View.extend({
     }});
 
     if (note) {
+      this.$('#title').val('');
+      this.$('#body').val('');
       app.navigate('', {trigger: true});
     }
   }
