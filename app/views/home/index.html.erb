@@ -1,38 +1,31 @@
 <div id="notesapp" class="container">
+  <div class="row">
+    <div class="span12">
+    </div>
+  </div>
 </div>
 
 <script id="new-note-template" type="text/template">
-  <div class="row">
-    <div class="span12">
-      <form class="form-horizontal">
-        <legend>New note</legend>
-        <div class="control-group">
-          <label class="control-label" for="title">Title</label>
-          <div class="controls">
-            <input id="title" type="text" placeholder="Title">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="body">Body</label>
-          <div class="controls">
-            <textarea id="body" placeholder="Body" rows="5"></textarea>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <button id="create" type="submit" class="btn">Add</button>
-          </div>
-        </div>
-      </form>
+  <form class="form-horizontal">
+    <legend>New note</legend>
+    <div class="control-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+        <input id="title" type="text" placeholder="Title">
+      </div>
     </div>
-</script>
-
-<script id="notes-template" type="text/template">
-  <div class="row">
-    <div class="span12">
-      <ul id="notes"></ul>
+    <div class="control-group">
+      <label class="control-label" for="body">Body</label>
+      <div class="controls">
+        <textarea id="body" placeholder="Body" rows="5"></textarea>
+      </div>
     </div>
-  </div>
+    <div class="control-group">
+      <div class="controls">
+        <button id="create" type="submit" class="btn">Add</button>
+      </div>
+    </div>
+  </form>
 </script>
 
 <script id="note-template" type="text/template">

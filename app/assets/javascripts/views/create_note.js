@@ -5,12 +5,7 @@ var CreateNoteView = Backbone.View.extend({
     'click #create': 'onCreate',
   },
 
-  initialize: function() {
-    console.log('CreateNoteView.initialize');
-  },
-
   render: function() {
-    console.log('CreateNoteView.render');
     var html = this.template();
     this.$el.html(html);
 
@@ -18,7 +13,6 @@ var CreateNoteView = Backbone.View.extend({
   },
 
   onCreate: function(e) {
-    console.log('CreateNoteView.create');
     e.preventDefault();
 
     var title = this.$('#title').val();

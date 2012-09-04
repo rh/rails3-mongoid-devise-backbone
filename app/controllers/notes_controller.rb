@@ -2,7 +2,7 @@ class NotesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with(@notes = Note.all)
+    respond_with(@notes = Note.asc(:created_at))
   end
 
   def show

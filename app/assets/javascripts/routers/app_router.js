@@ -5,23 +5,23 @@ var AppRouter = Backbone.Router.extend({
   },
 
   initialize: function() {
-    this.el = $('#notesapp');
+    this.el = $('#notesapp .row .span12');
     this.collection = new NoteCollection();
     this.collection.fetch();
 
-    this.listNotesView = new ListNotesView({el: this.el, collection: this.collection});
-    this.createNoteView = new CreateNoteView({el: this.el, collection: this.collection});
+    this.listNotesView = new ListNotesView({collection: this.collection});
+    this.listNotesView.render();
+    this.createNoteView = new CreateNoteView({collection: this.collection});
+    this.createNoteView.render();
   },
 
   onList: function() {
-    console.log('/');
     this.el.empty();
-    this.listNotesView.render();
+    this.el.append(this.listNotesView.el);
   },
 
   onNew: function() {
-    console.log('/#new');
     this.el.empty();
-    this.createNoteView.render();
+    this.el.append(this.createNoteView.el);
   }
 });
