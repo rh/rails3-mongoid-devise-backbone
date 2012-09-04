@@ -1,8 +1,11 @@
-<div class="container">
-  <div id="notesapp" class="row">
-    <div class="span5">
+<div id="notesapp" class="container">
+</div>
+
+<script id="new-note-template" type="text/template">
+  <div class="row">
+    <div class="span12">
       <form class="form-horizontal">
-        <legend>Add note</legend>
+        <legend>New note</legend>
         <div class="control-group">
           <label class="control-label" for="title">Title</label>
           <div class="controls">
@@ -22,12 +25,15 @@
         </div>
       </form>
     </div>
-    <div class="span7">
-      <legend>Notes</legend>
-      <ul id="note-list"></ul>
+</script>
+
+<script id="notes-template" type="text/template">
+  <div class="row">
+    <div class="span12">
+      <ul id="notes"></ul>
     </div>
   </div>
-</div>
+</script>
 
 <script id="note-template" type="text/template">
   <div class="note">
@@ -35,7 +41,7 @@
     {{{body}}}
     <p>
       <span class="date">{{date}}</span>
-      <a class="remove" href="#" title="Remove this note">remove</a>
+      <a id="{{cid}}" class="remove" href="#" title="Remove this note">remove</a>
     </p>
   </div>
 </script>

@@ -26,5 +26,5 @@
 //= require_tree ./routers
 //= require ./bootstrap
 
-var Notes = new NoteCollection;
-var App = new AppView;
+var app = new AppRouter();
+Backbone.history.start();

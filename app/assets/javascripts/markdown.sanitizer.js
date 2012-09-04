@@ -20,7 +20,7 @@
     }
 
     function sanitizeHtml(html) {
-        return html.replace(/<[^>]*>?/gi, sanitizeTag);
+        return (html || '').replace(/<[^>]*>?/gi, sanitizeTag);
     }
 
     // (tags that can be opened/closed) | (tags that stand alone)
