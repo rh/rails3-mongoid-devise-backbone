@@ -22,5 +22,12 @@
 //= require_tree ./views
 //= require_tree ./routers
 
-var app = new AppRouter();
-Backbone.history.start();
+$(document).ready(function() {
+  var token = $('meta[name="csrf-token"]').attr('content');
+  $(document).on('ajaxBeforeSend', function(e, xhr, options) {
+    xhr.setRequestHeader('X-CSRF-Token', token);
+  });
+
+  window.app = new AppRouter();
+  Backbone.history.start();
+});
