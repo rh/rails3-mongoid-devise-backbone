@@ -16,11 +16,37 @@
         <li><a href="#">List</a></li>
         <li><a href="#new">New</a></li>
       </ul>
+      <ul class="nav pull-right">
+        <% if user_signed_in? -%>
+          <li><%= link_to 'Sign out', destroy_user_session_path %></li>
+        <% else -%>
+          <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <% end -%>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <% if alert -%>
+      <div class="alert alert-error">
+        <%= alert %>
+      </div>
+      <% end -%>
+
+      <% if notice -%>
+      <div class="alert alert-success">
+        <%= notice %>
+      </div>
+      <% end -%>
     </div>
   </div>
 </div>
 
 <%= yield %>
+
 <%= javascript_include_tag "application" %>
 </body>
 </html>

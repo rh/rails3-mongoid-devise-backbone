@@ -2,23 +2,28 @@ class NotesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with(@notes = Note.asc(:created_at))
+    @notes = Note.where(user_id: current_user.id).asc(:created_at)
+
+    respond_with(@notes)
   end
 
   def show
-    @note = Note.find(params[:id])
+    @note = Note.where(user_id: current_user.id).find(params[:id])
+
     respond_with @note
   end
 
   def create
     @note = Note.new(params[:note])
+    @note.user_id = current_user.id
     @note.save
+
     respond_with @note
   end
 
   def destroy
-    @note = Note.find(params[:id])
-    @note.destroy
+    @note = Note.where(user_id: current_user.id).find(params[:id])
+    @note.destroy if @note
 
     respond_to do |format|
       format.json { head :no_content }
