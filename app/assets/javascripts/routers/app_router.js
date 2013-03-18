@@ -5,7 +5,7 @@ var AppRouter = Backbone.Router.extend({
   },
 
   initialize: function() {
-    this.el = $('#notesapp .row .span12');
+    this.el = $('#notesapp .row');
     this.collection = new NoteCollection();
     this.collection.fetch();
 

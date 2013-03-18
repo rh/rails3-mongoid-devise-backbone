@@ -10,8 +10,8 @@ var Note = Backbone.Model.extend({
   },
 
   validate: function(attributes) {
-    if (!attributes.title && !attributes.body) {
-      return {title: true};
+    if (!attributes.body) {
+      return {body: true};
     }
   }
 });
